@@ -17,28 +17,29 @@ end)
 
 RegisterNetEvent('mvrp_repairkit:client:syncRepair', function(vehicle, index)
     local repairKitItemConfig = Config.RepairKits[index]
-    DebugPrint("DEBUG: Syncing repair for vehicle "..tostring(vehicle).." with repair item "..tostring(repairKitItemConfig.item))
+    DebugPrint("Syncing repair for vehicle "..tostring(vehicle).." with repair item "..tostring(repairKitItemConfig.item))
     if not DoesEntityExist(vehicle) then return end
     local tyres = { 0, 1, 2, 3, 4, 5, 45, 47 }
-
-    -- Massive rework incoming, leaving to repair all for now
-    -- but can specify parts later on
-
     -- Loop through repairKitItemConfig.repairParts and fix each that is set to true
     for part, value in pairs(repairKitItemConfig.repairParts) do
         if value then
             if part == 'wheels' then
+                DebugPrint("Fixing wheels")
                 for _, data in pairs(tyres) do
                     SetVehicleTyreFixed(vehicle, data)
                 end
             elseif part == 'body' then
+                DebugPrint("Fixing body")
                 SetVehicleFixed(vehicle)
                 SetVehicleDeformationFixed(vehicle)
             elseif part == 'engine' then
+                DebugPrint("Fixing engine")
                 SetVehicleEngineHealth(vehicle, 1000)
             elseif part == 'cleaning' then
+                DebugPrint("Cleaning vehicle")
                 SetVehicleDirtLevel(vehicle, 0)
             elseif part == 'anticleaning' then
+                DebugPrint("Dirtying vehicle")
                 SetVehicleDirtLevel(vehicle, 15)
             end
         end

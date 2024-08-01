@@ -15,11 +15,22 @@ Config.RepairKits = {
         repairParts = { -- Parts of the vehicle that will be repaired. Can leave out if not used
             wheels = false, -- Fix all wheels
             body = true, -- Fix body damage
-            engine = true, -- Fix engine damage
-            cleaning = false,
+            engine = false, -- Fix engine damage
+            cleaning = false, -- Cleans vehicle
             anticlean = false -- Dirty vehicle
         },
         anim = { -- Animation stuff
+            dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@',
+            lib = 'machinic_loop_mechandplayer'
+        }
+    },
+    {
+        item = 'enginerepairkit',
+        usetime = 15 * seconds,
+        repairParts = {
+            engine = true,
+        },
+        anim = {
             dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@',
             lib = 'machinic_loop_mechandplayer'
         }
