@@ -1,0 +1,6 @@
+-- Vehicle Tools
+repairkit             = { name = 'repairkit', label = 'Repair Kit', weight = 2500, type = 'item', image = 'repairkit.png', unique = false, useable = true, shouldClose = true, description = 'A nice tool to repair your vehicle body' },
+advancedrepairkit     = { name = 'advancedrepairkit', label = 'Advanced Repair Kit', weight = 2500, type = 'item', image = 'advancedkit.png', unique = false, useable = true, shouldClose = true, description = 'A nice tool to fully repair your vehicle' },
+enginerepairkit       = { name = 'enginerepairkit', label = 'Engine Repair Kit', weight = 2500, type = 'item', image = 'repairkit2.png', unique = false, useable = true, shouldClose = true, description = 'A nice tool to fully repair your vehicle' },
+tirerepairkit         = { name = 'tirerepairkit', label = 'Tire Repair Kit', weight = 2500, type = 'item', image = 'repairkit3.png', unique = false, useable = true, shouldClose = true, description = 'A nice tool to repair your vehicle wheels' },
+cleaningkit           = { name = 'cleaningkit', label = 'Cleaning Kit', weight = 2500, type = 'item', image = 'cleaningkit.png', unique = false, useable = true, shouldClose = true, description = 'A nice tool to clean your vehicle' }
